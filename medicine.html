@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription Details</title>
+    <link rel="stylesheet" href="medicine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="top-bar">
+    <i class="fa-solid fa-arrow-left" onclick="history.back()"></i>
+    <h2>Prescription Analysis</h2>
+</div>
+<div class="prescription-card">
+     <img src="Screenshot 2025-11-26 122507.png" class="doc-img" alt="Doctor">
+    <div class="left-info">
+        <h3>Dr. Abhishek Kumar</h3>
+        <p><b>Hospital:</b> XYZ Hospital</p>
+        <p><b>Date:</b> 25 Nov 2025</p>
+    </div>
+
+   
+</div>
+<div class="medicine-box">
+    <h3>Medicine Instructions</h3>
+
+    <div class="med-block">
+        <p><b>1. Paracetamol 500mg</b></p>
+        <p>→ Take 2 times daily after food</p>
+        <p>→ Continue for 5 days</p>
+        <p><b>Side Effects:</b> Mild headache possible</p>
+    </div>
+
+    <div class="med-block">
+        <p><b>2. Cough Syrup</b></p>
+        <p>→ Take 2 spoons at night</p>
+        <p>→ Continue for 7 days</p>
+        <p><b>Side Effects:</b> May cause sleepiness</p>
+    </div>
+
+</div>
+<div class="btn-layout">
+
+    <button class="btn full" id=btn1 >Reminder</button>
+
+    <div class="half-row">
+        <button class="btn half" onclick="window.location.href='nearby.html'">Nearby Stores</button>
+        <button class="btn half" onclick="window.location.href='Availability.html'">Availability</button>
+    </div>
+
+    <button class="btn full" id=btn2>Share Result</button>
+
+</div>
+
+
+<div id="reminderPopup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h2>Set Reminder</h2>
+    <form id="reminderForm">
+      <input type="text" id="medicineName" placeholder="Medicine Name" required>
+      <input type="time" id="reminderTime" required>
+      <button type="submit">Add Reminder</button>
+    </form>
+    <ul id="reminderList"></ul>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const remainderBtn = document.getElementById('btn1');
+  const popup = document.getElementById('reminderPopup');
+  const closeBtn = document.querySelector('.close');
+
+  
+  remainderBtn.addEventListener('click', () => {
+    popup.style.display = 'flex';
+  });
+
+ 
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+});
+
+</script>
+
+
+</body>
+</html>

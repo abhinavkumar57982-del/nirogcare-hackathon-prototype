@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Female Health</title>
+  <link rel="stylesheet" href="female.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="header-title">Women’s Health</div>
+  </header>
+
+  <main class="container">
+    <div class="btn-box">
+      <button onclick="showSection('tips')"><i class="fa-solid fa-heart-pulse"></i> Health Tips</button>
+      <button onclick="showSection('pregnancy')"><i class="fa-solid fa-baby"></i> Pregnancy Care</button>
+      <button onclick="showSection('govt')"><i class="fa-solid fa-building-columns"></i> Government Schemes</button>
+      <button onclick="showSection('emergency')"><i class="fa-solid fa-phone"></i> Emergency Help</button>
+    </div>
+
+    <section id="tips" class="output">
+      <h2>Health Tips</h2>
+      <ul>
+        <li>Eat balanced meals — fruits, vegetables, protein and whole grains.</li>
+        <li>Drink enough water (around 2–3 L daily unless doctor advises otherwise).</li>
+        <li>Do moderate exercise like walking or yoga 30 min daily.</li>
+        <li>Take regular check-ups and get routine blood tests (iron, B12).</li>
+        <li>Sleep 7–8 hours; manage stress with breathing/meditation.</li>
+      </ul>
+    </section>
+
+    <section id="pregnancy" class="output">
+      <h2>Pregnancy Care</h2>
+
+      <div class="med-block">
+        <p><strong>Early Care</strong></p>
+        <p>Confirm pregnancy with a doctor, start antenatal (ANC) visits and take folic acid and iron as prescribed.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Routine Checks</strong></p>
+        <p>Regular ANC visits, ultrasound as advised, blood sugar and blood pressure monitoring.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Nutrition</strong></p>
+        <p>Protein-rich diet, iron & calcium supplements (as advised), adequate calories and hydration.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Delivery Plan</strong></p>
+        <p>Discuss birth plan with your provider; ASHA/ANM can guide facility choices and transport.</p>
+      </div>
+    </section>
+
+    <section id="govt" class="output">
+      <h2>Government Schemes (Demo)</h2>
+
+      <div class="med-block">
+        <p><strong>ASHA (Accredited Social Health Activist)</strong></p>
+        <p>ASHA workers are community health link-workers under the National Health Mission. They assist pregnant women by providing counselling, arranging ANC visits, promoting institutional delivery and linking families to benefits.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Janani Suraksha Yojana (JSY) — Demo</strong></p>
+        <p>JSY supports safe delivery by offering cash incentives for institutional deliveries (eligibility and amounts vary by state). Contact your local ASHA/PHC for enrollment help.</p>
+      </div>
+
+      <p class="note"><strong>Note:</strong> This is demo content. For exact benefits & eligibility, contact your local ASHA worker or nearest Primary Health Centre (PHC).</p>
+    </section>
+
+    <section id="emergency" class="output">
+      <h2>Emergency Help</h2>
+
+      <div class="med-block">
+        <p><strong>Immediate Emergency (All India)</strong></p>
+        <p>Call: <a href="tel:112" class="tel">112</a> — National Emergency Number (police/ambulance/fire)</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Ambulance (State / Local)</strong></p>
+        <p>Some states use <strong>102</strong> for ambulance services. Also contact your local PHC or hospital.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>ASHA Contact</strong></p>
+        <p>If you have registered, call your local ASHA worker for home visits, transport arrangement and delivery assistance.</p>
+      </div>
+
+      <button class="btn-call" onclick="window.location.href='tel:112'"><i class="fa-solid fa-phone"></i> Call 112</button>
+    </section>
+
+  </main>
+
+<script>
+
+  function showSection(id){
+    document.querySelectorAll('.output').forEach(s => s.style.display = 'none');
+    const el = document.getElementById(id);
+    if(el) el.style.display = 'block';
+   
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+
+  showSection('tips');
+</script>
+
+</body>
+</html>

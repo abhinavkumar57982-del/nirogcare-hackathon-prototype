@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="mentalhealth.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <a href="home.html" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+</a>
+
+
+    <header class="header">
+        <h2>Mental Health Support</h2>
+    </header>
+
+    <div class="container">
+
+        
+        <div class="card">
+            <h3><i class="fa-solid fa-music"></i> Mind Relaxing Music</h3>
+
+            <audio id="relaxAudio">
+                <source src="Malang Sajna Sachet Tandon, Parampara Tandon, Kumaar, Sachet-Parampara (320K).mp3" type="audio/mpeg">
+            </audio>
+
+            <button class="music-btn" onclick="toggleMusic()">
+                <i id="musicIcon" class="fa-solid fa-play"></i> Play Music
+            </button>
+        </div>
+
+        
+        <div class="card">
+            <h3><i class="fa-solid fa-brain"></i> Mental Health Exercises</h3>
+            <ul>
+                <li>5-minute deep breathing</li>
+                <li>Light meditation for 10 minutes</li>
+                <li>Positive affirmations</li>
+                <li>Yoga (Child pose, Cobra pose)</li>
+                <li>Journaling your thoughts</li>
+            </ul>
+        </div>
+
+        
+        <div class="card">
+            <h3><i class="fa-solid fa-apple-whole"></i> Foods Good for Mental Health</h3>
+            <ul>
+                <li>Walnuts, Almonds</li>
+                <li>Bananas & Dark Chocolate</li>
+                <li>Green leafy vegetables</li>
+                <li>Milk & Protein rich items</li>
+                <li>Oats & Whole grains</li>
+            </ul>
+        </div>
+
+        
+        <div class="card">
+            <h3><i class="fa-solid fa-phone"></i> Emergency Helpline</h3>
+            <p><strong>Suicide Prevention Helpline (India): 1800-599-0019</strong></p>
+            <p><strong>Mental Health Crisis Helpline: 9152987821</strong></p>
+        </div>
+
+    </div>
+
+<script>
+function toggleMusic() {
+    let audio = document.getElementById("relaxAudio");
+    let icon = document.getElementById("musicIcon");
+
+    if (audio.paused) {
+        audio.play();
+        icon.classList.remove("fa-play");
+        icon.classList.add("fa-pause");
+    } else {
+        audio.pause();
+        icon.classList.remove("fa-pause");
+        icon.classList.add("fa-play");
+    }
+}
+</script>
+
+</body>
+</html>

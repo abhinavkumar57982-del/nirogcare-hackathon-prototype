@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Infant Care</title>
+  <link rel="stylesheet" href="infantcare.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="header-title">Infant Care</div>
+  </header>
+
+  <main class="container">
+
+    <div class="btn-box">
+      <button onclick="showSection('tips')"><i class="fa-solid fa-heartbeat"></i> Health Tips</button>
+      <button onclick="showSection('nutrition')"><i class="fa-solid fa-bottle-baby"></i> Infant Nutrition</button>
+      <button onclick="showSection('govt')"><i class="fa-solid fa-building-columns"></i> Govt Schemes</button>
+      <button onclick="showSection('problems')"><i class="fa-solid fa-triangle-exclamation"></i> Common Problems</button>
+    </div>
+
+    
+    <section id="tips" class="output">
+      <h2>Health Tips for Infants</h2>
+      <ul>
+        <li>Exclusive breastfeeding for first 6 months.</li>
+        <li>Keep baby warm, avoid strong AC/cold exposure.</li>
+        <li>Burp baby after every feed.</li>
+        <li>Maintain proper hygiene during handling.</li>
+        <li>Follow vaccination schedule strictly.</li>
+      </ul>
+    </section>
+
+ 
+    <section id="nutrition" class="output">
+      <h2>Infant Nutrition</h2>
+
+      <div class="med-block">
+        <p><strong>0–6 Months</strong></p>
+        <p>Exclusive breastfeeding. No water, honey, cow milk or solid foods.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>6–12 Months</strong></p>
+        <p>Introduce mashed foods like banana, dal, rice, khichdi, curd along with breastmilk.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>1 Year+</strong></p>
+        <p>Soft family food: chapati pieces, rice, vegetables, egg (if suggested), fruits.</p>
+      </div>
+    </section>
+
+   
+    <section id="govt" class="output">
+      <h2>Government Schemes</h2>
+
+      <div class="med-block">
+        <p><strong>Poshan Abhiyaan</strong></p>
+        <p>Provides nutrition support & monitoring for infants via Anganwadi centres.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Anganwadi Services</strong></p>
+        <p>Free vaccines, growth monitoring, supplementary nutrition.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Universal Immunization Program</strong></p>
+        <p>All essential vaccines for newborns are free.</p>
+      </div>
+
+      <p class="note"><strong>Note:</strong> This is demo content; visit nearest PHC/Anganwadi for real information.</p>
+    </section>
+
+  
+    <section id="problems" class="output">
+      <h2>Common Infant Problems</h2>
+
+      <div class="med-block">
+        <p><strong>Colic</strong></p>
+        <p>Baby cries for long period — soothe with gentle rocking/burping.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Diarrhea</strong></p>
+        <p>Keep baby hydrated; consult doctor immediately.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Cold & Cough</strong></p>
+        <p>Use warm clothing; avoid self-medication.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Skin Rashes</strong></p>
+        <p>Keep diaper area dry; use gentle baby products.</p>
+      </div>
+    </section>
+
+  </main>
+
+<script>
+  function showSection(id){
+    document.querySelectorAll('.output').forEach(s => s.style.display = 'none');
+    let el = document.getElementById(id);
+    if(el) el.style.display = 'block';
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  showSection('tips');
+</script>
+
+</body>
+</html>

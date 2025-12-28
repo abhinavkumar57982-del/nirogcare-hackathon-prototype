@@ -1,0 +1,107 @@
+
+
+*{ box-sizing: border-box; margin:0; padding:0; font-family: 'Poppins', sans-serif; }
+body{
+  background: linear-gradient(#7af6ee, #eafffe);
+  min-height: 100vh;
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header{
+  width: 92%;
+  max-width: 900px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 16px;
+}
+.back-btn{
+  background: #ffffffcc;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.back-btn i{ font-size: 18px; color: #006165; }
+.header-title{
+  background: linear-gradient(#7af6ee,#eafffe);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #003233;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.container{
+  width: 92%;
+  max-width: 900px;
+}
+
+.btn-box{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+}
+
+.btn-box button{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #003233;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.09);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.btn-box button i{
+  font-size: 20px;
+  color:#00766f;
+  width: 30px;
+  text-align: center;
+}
+.btn-box button:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+.output{
+  display:none;
+  margin-top:18px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.output h2{
+  margin-bottom: 8px;
+  color: #004d4a;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.med-block{
+  background: rgba(122,246,238,0.15);
+  padding: 10px;
+  border-radius:10px;
+  margin-bottom: 12px;
+}
+.note{
+  font-size: 13px;
+  color: #333;
+}
+
+@media (min-width: 700px){
+  .btn-box{ flex-direction: row; gap: 16px; }
+  .btn-box button{ flex:1; }
+}

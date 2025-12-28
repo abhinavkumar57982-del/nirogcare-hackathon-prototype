@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Male Health</title>
+  <link rel="stylesheet" href="male.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <div class="header-title">Men’s Health</div>
+  </header>
+
+  <main class="container">
+    <div class="btn-box">
+      <button onclick="showSection('tips')">
+        <i class="fa-solid fa-heart-pulse"></i> Health Tips
+      </button>
+
+      <button onclick="showSection('problems')">
+        <i class="fa-solid fa-person"></i> Male Problems
+      </button>
+
+      <button onclick="showSection('govt')">
+        <i class="fa-solid fa-building-columns"></i> Government Schemes
+      </button>
+
+      <button onclick="showSection('emergency')">
+        <i class="fa-solid fa-phone"></i> Emergency Help
+      </button>
+    </div>
+
+    
+    <section id="tips" class="output">
+      <h2>Health Tips</h2>
+      <ul>
+        <li>Balanced diet: protein, whole grains, fruits & vegetables daily.</li>
+        <li>Workout 30–45 minutes: cardio + strength training.</li>
+        <li>Avoid smoking, excessive alcohol & junk food.</li>
+        <li>Get regular checkups: BP, sugar, cholesterol.</li>
+        <li>Sleep 7–8 hours & reduce stress with meditation.</li>
+      </ul>
+    </section>
+
+ 
+    <section id="problems" class="output">
+      <h2>Common Male Health Problems</h2>
+
+      <div class="med-block">
+        <p><strong>Hair Fall (Common)</strong></p>
+        <p>Caused by stress, genetics, low nutrition. Improve diet, avoid harsh chemicals.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Acne / Skin Issues</strong></p>
+        <p>Often due to oily skin or hormones. Use gentle cleansers and drink enough water.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Obesity & Belly Fat</strong></p>
+        <p>Start strength training + reduce sugar + increase protein intake.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Low Energy / Fatigue</strong></p>
+        <p>Check iron, B12, vitamin D levels; improve sleep schedule.</p>
+      </div>
+    </section>
+
+    
+    <section id="govt" class="output">
+      <h2>Government Schemes (Demo)</h2>
+
+      <div class="med-block">
+        <p><strong>Ayushman Bharat (PMJAY)</strong></p>
+        <p>Offers up to ₹5 lakh free treatment per family per year in empaneled hospitals.</p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>PM E-Sanjeevani</strong></p>
+        <p>Free online doctor consultation service by the Government of India.</p>
+      </div>
+
+      <p class="note"><strong>Note:</strong> This is demo content. For accurate info visit your nearest health center or official govt portal.</p>
+    </section>
+
+  
+    <section id="emergency" class="output">
+      <h2>Emergency Help</h2>
+
+      <div class="med-block">
+        <p><strong>All India Emergency</strong></p>
+        <p>Call: <a href="tel:112" class="tel">112</a></p>
+      </div>
+
+      <div class="med-block">
+        <p><strong>Ambulance</strong></p>
+        <p>Many states use <strong>108</strong> or <strong>102</strong> for quick medical ambulance service.</p>
+      </div>
+
+      <button class="btn-call" onclick="window.location.href='tel:112'">
+        <i class="fa-solid fa-phone"></i> Call 112
+      </button>
+    </section>
+
+  </main>
+
+<script>
+  function showSection(id){
+    document.querySelectorAll('.output').forEach(s => s.style.display = 'none');
+    const el = document.getElementById(id);
+    if(el) el.style.display = 'block';
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+
+  
+  showSection('tips');
+</script>
+
+</body>
+</html>

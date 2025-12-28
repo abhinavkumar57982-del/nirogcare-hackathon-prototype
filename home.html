@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="white">
+    <div class="upper">
+    <h2>LOCATION</h2>
+    </div>
+    <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+    <P>XYZ MARKET</P>
+    </div>
+    <div id="search">
+    <form action="" id="search">
+            <div class="form-group">
+            <input type="Search" required>
+            <label for="">Search</label>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+    </form>
+    </div></div>
+    <div class="container2">
+    <h2>Upload Prescription</h2>
+
+    <label class="upload-box">
+        <input type="file" id="fileInput" accept="image/*">
+        <img src="Screenshot 2025-11-26 031324.png" alt="Upload">
+        <p>Click to Upload Prescription</p>
+    </label>
+
+    <button type="button" id="nextBtn" disabled onclick="goNext()">Next</button>
+</div>
+    <div id="category">
+        <h2>Catogery</h2>
+    </div>
+    <div class="container"> 
+        
+            <div id="btn-grid">
+            <button class="img-btn" id="btn1" onclick="window.location.href='male.html'">
+    <img src="Screenshot 2025-11-25 232102.png">
+    <h2>Male</h2>
+</button>
+            <button class="img-btn" id="btn2" onclick="window.location.href='female.html'">
+                <img src="Screenshot 2025-11-25 232607.png">
+                <h2>female</h2>
+            </button>
+            <button class="img-btn" id="btn3" onclick="window.location.href='infantcare.html'">
+                <img src="Screenshot 2025-11-25 232628.png">
+                <h2>Infant care</h2>
+            </button>
+            <button class="img-btn" id="btn4" onclick="window.location.href='mentalhealth.html'">
+                <img src="Screenshot 2025-11-25 232650.png">
+                <h2>Mental Health</h2>
+            </button>
+            </div>
+
+        
+    </div>
+<script src="home.js"></script>
+</body>
+</html>

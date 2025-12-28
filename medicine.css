@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+body {
+    background: linear-gradient(#7af6ee, #eafffe);
+    padding: 20px;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-bar i {
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.top-bar h2 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+.prescription-card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 18px;
+    font-size: 1.3em;
+}
+
+.doc-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.medicine-box {
+    background: #fff;   
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.medicine-box h3 {
+    margin-bottom: 12px;
+    font-size: 1.6em;
+}
+
+.med-block {
+    background: #7af6ee;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 1.43em;
+}
+.btn-layout {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    padding: 15px;
+    background: #4C83FF;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #2d6aff;
+}
+.full {
+    width: 100%;
+}
+#btn1{
+    background: rgb(250, 89, 31);
+}
+#btn1:hover{
+    background: rgb(255, 68, 0);
+}
+#btn2{
+    background: rgb(146, 146, 146);
+}
+#btn2:hover{
+    background: rgb(230, 198, 198);
+}
+.half-row {
+    display: flex;
+    gap: 15px;
+}
+
+.half {
+    flex: 1;
+}
+@media (max-width: 450px) {
+
+    .prescription-card {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .half-row {
+        flex-direction: column;
+    }
+}
+
+.popup {
+  display: none;             
+  position: fixed;            
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); 
+  justify-content: center;    
+  align-items: center;       
+  z-index: 9999;             
+  flex-direction: column;
+}
+
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+#reminderForm input {
+  width: 90%;
+  height: 50px;
+  font-size: 1.2em;
+  padding: 0 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+#reminderForm button {
+  width: 95%;
+  padding: 14px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  background: #4C83FF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+.close {
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
